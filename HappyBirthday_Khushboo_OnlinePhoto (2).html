@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Khushboo 🎂</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background: black;
+      color: #00ffcc;
+      overflow: hidden;
+    }
+
+    h1.typing {
+      width: 16ch;
+      animation: typing 4s steps(16), blink .5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .15em solid #00ffcc;
+      margin: 80px auto 30px;
+      text-align: center;
+      font-size: 2.5em;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 16ch }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.4em;
+      margin: 20px;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 1em;
+      color: #ccc;
+    }
+
+    .emoji {
+      position: absolute;
+      top: -2rem;
+      font-size: 2rem;
+      animation: floatDown linear infinite;
+    }
+
+    @keyframes floatDown {
+      0% {
+        transform: translateY(-5vh) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .photo {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .photo img {
+      width: 220px;
+      height: auto;
+      border-radius: 20px;
+      border: 4px solid #00ffcc;
+      box-shadow: 0 0 20px #00ffcc;
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h1 class="typing">Happy Birthday</h1>
+
+  <div class="photo">
+    <img src="https://i.postimg.cc/Xp5ZQTHX/IMG-20240609-183628-659.jpg" alt="Khushboo" />
+  </div>
+
+  <p>"Happy Birthday, my love! You make every moment magical just by being you. Here’s to us and forever more. 💖"</p>
+  <p>– From: Adi</p>
+
+  <p style="font-style: italic; color: #ff99cc; font-size: 1.3em; text-align: center; max-width: 700px; margin: 20px auto;">
+    "In a sky full of stars, you're the brightest. In a world full of noise, your love is my favorite melody." 💫💞
+  </p>
+
+  <div class="footer">Made with ❤️ by Adi</div>
+
+  <!-- Falling emojis -->
+  <script>
+    const emojis = ['💖','💞','😚','🫀','💌','🥰'];
+    for (let i = 0; i < 25; i++) {
+      const e = document.createElement("div");
+      e.className = "emoji";
+      e.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      e.style.left = Math.random() * 100 + "vw";
+      e.style.animationDelay = Math.random() * 5 + "s";
+      e.style.animationDuration = 2 + Math.random() * 3 + "s";
+      document.body.appendChild(e);
+    }
+  </script>
+
+  <!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    setTimeout(() => {
+      confetti({
+        particleCount: 150,
+        spread: 180,
+        origin: { y: 0.6 }
+      });
+    }, 3000);
+  </script>
+
+</body>
+</html>
